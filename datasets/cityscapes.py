@@ -123,8 +123,8 @@ def make_dataset(quality, mode, maxSkip=0, fine_coarse_mult=6, cv_split=0):
 
     if quality == 'fine':
         assert mode in ['train', 'val', 'test', 'trainval']
-        img_dir_name = 'leftImg8bit_trainvaltest'
-        img_path = os.path.join(root, img_dir_name, 'leftImg8bit')
+        img_dir_name = 'gtFine_trainvaltest'
+        img_path = os.path.join(root, img_dir_name, 'gtFine')
         mask_path = os.path.join(root, 'gtFine_trainvaltest', 'gtFine')
         mask_postfix = '_gtFine_labelIds.png'
         cv_splits = make_cv_splits(img_dir_name)
