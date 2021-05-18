@@ -56,13 +56,9 @@ def make_cv_splits(img_dir_name):
     A split is a lists of cities.
     split0 is aligned with the default Cityscapes train/val.
     '''
-<<<<<<< HEAD
     trn_path = os.path.join(root, img_dir_name, 'gtFine', 'train')
     val_path = os.path.join(root, img_dir_name, 'gtFine', 'val')
-=======
-    trn_path = os.path.join(root, img_dir_name, 'gtFine_trainvaltest', 'train')
-    val_path = os.path.join(root, img_dir_name, 'gtFine_trainvaltest', 'val')
->>>>>>> 83e99842385fee60636ec8fe7f09107c2d9356dd
+
 
     trn_cities = ['train/' + c for c in os.listdir(trn_path)]
     val_cities = ['val/' + c for c in os.listdir(val_path)]
