@@ -1,5 +1,5 @@
 # GSCNN
-This is the official code for:
+This is a modification of the official code for:
 
 #### Gated-SCNN: Gated Shape CNNs for Semantic Segmentation
 
@@ -8,8 +8,14 @@ This is the official code for:
 ICCV 2019
 **[[Paper](https://arxiv.org/abs/1907.05740)]  [[Project Page](https://nv-tlabs.github.io/GSCNN/)]**
 
+You can find the original code [here](https://github.com/nv-tlabs/GSCNN)
+Based on https://github.com/NVIDIA/semantic-segmentation.
 
-Based on based on https://github.com/NVIDIA/semantic-segmentation.
+#### Resnet18
+
+The original code uses a WiderResNet38 in the upper network and this does not run on
+all machines (needs more GPUs). The codecontained in this repo replaces this top 
+network with the lighter Resnet 18 which will run on more machines. 
 
 ## License
 ```
@@ -36,10 +42,6 @@ OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 ## Usage
 
 ##### Clone this repo
-```bash
-git clone https://github.com/nv-tlabs/GSCNN
-cd GSCNN
- ```
 
 #### Python requirements 
 
@@ -68,9 +70,6 @@ Download (if needed) the inferred images from the [Google Drive Folder](https://
 python train.py --evaluate --snapshot checkpoints/best_cityscapes_checkpoint.pth
 ```
 
-#### Training
-
-A note on training- we train on 8 NVIDIA GPUs, and as such, training will be an issue with WiderResNet38 if you try to train on a single GPU.
 
 If you use this code, please cite:
 
@@ -82,5 +81,3 @@ If you use this code, please cite:
   year={2019}
 }
 ```
-
-# GSCNN-project
