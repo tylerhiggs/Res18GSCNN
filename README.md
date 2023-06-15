@@ -14,7 +14,7 @@ Based on https://github.com/NVIDIA/semantic-segmentation.
 #### Resnet18
 
 The original code uses a WiderResNet38 in the upper network and this does not run on
-all machines (needs more GPUs). The codecontained in this repo replaces this top 
+all machines (needs more GPUs). The code contained in this repo replaces this top 
 network with the lighter Resnet 18 which will run on more machines. 
 
 ## License
